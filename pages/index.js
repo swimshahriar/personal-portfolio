@@ -4,11 +4,11 @@ import Head from "next/head";
 import Header from "../components/Header/Header";
 
 // styles
-import styles from "../styles/Home.module.css";
+import styles from "../styles/pages/Home.module.scss";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Shahriar Swim</title>
         <link rel="icon" href="/favicon.ico" />
@@ -19,6 +19,6 @@ export default function Home() {
       <main>
         <h1>Portfolio</h1>
       </main>
-    </div>
+    </>
   );
 }
