@@ -22,7 +22,7 @@
   --normal-font-size: 0.938rem;
 
   @media screen and (min-width: 768px) {
-    --big-font-size: 3.5rem;
+    --big-font-size: 3rem;
     --h2-font-size: 2rem;
     --normal-font-size: 1rem;
   }
@@ -86,6 +86,16 @@ img {
   display: block;
 }
 
+// section style
+.sectionStyle {
+  max-width: 1024px;
+  // display: grid;
+  // grid-template-columns: 100%;
+  // grid-column-gap: 2rem;
+  margin: 0 auto;
+  width: calc(100% - 2rem);
+}
+
 // show mobile nav
 .show {
   right: 0 !important;
@@ -100,4 +110,18 @@ img {
   left: 0;
   top: 2rem;
   background-color: var(--first-color);
+}
+
+// button
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 0.75rem 2.5rem;
+  font-weight: var(--font-semi);
+  border-radius: 0.5rem;
+
+  &:hover {
+    box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
+  }
 }

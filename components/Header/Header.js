@@ -34,7 +34,7 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <nav className={styles.nav + " " + styles.bdGrid}>
+      <nav className={styles.nav + " sectionStyle"}>
         <div>
           <Link href="/">
             <a className={styles.nav__logo}>Shahriar</a>

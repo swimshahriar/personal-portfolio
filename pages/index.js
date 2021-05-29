@@ -2,6 +2,7 @@ import Head from "next/head";
 
 // components
 import Header from "../components/Header/Header";
+import Hero from "../components/Hero/Hero";
 
 // styles
 import styles from "../styles/pages/Home.module.scss";
@@ -17,7 +18,7 @@ export default function Home() {
       <Header />
 
       <main>
-        <h1>Portfolio</h1>
+        <Hero />
       </main>
     </>
   );
