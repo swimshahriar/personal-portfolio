@@ -7,87 +7,105 @@ import styles from "../../styles/components/Header/Header.module.scss";
 
 const Header = () => {
   const [isMobileView, setIsMobileView] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const onResizeHandler = () => {
+    if (window.innerWidth <= 768) {
+      setIsMobileView(true);
+    } else {
+      setIsMobileView(false);
+    }
+  };
 
   useEffect(() => {
     if (window.innerWidth <= 768) {
       setIsMobileView(true);
-
-      /*===== MENU SHOW =====*/
-      const showMenu = (toggleId, navId) => {
-        const toggle = document.getElementById(toggleId),
-          nav = document.getElementById(navId);
-
-        if (toggle && nav) {
-          toggle.addEventListener("click", () => {
-            nav.classList.toggle("show");
-          });
-        }
-      };
-      showMenu("nav-toggle", "nav-menu");
-
-      /*===== ACTIVE AND REMOVE MENU =====*/
-      const navLink = document.querySelectorAll(".nav__link");
-
-      function linkAction() {
-        /*Active link*/
-        navLink.forEach((n) => n.classList.remove("active"));
-        this.classList.add("active");
-
-        /*Remove menu mobile*/
-        const navMenu = document.getElementById("nav-menu");
-        navMenu.classList.remove("show");
-      }
-      navLink.forEach((n) => n.addEventListener("click", linkAction));
     }
+    window.onresize = onResizeHandler;
   }, []);
+
+  // active link indicator
+  const activeLinkHanlder = (event) => {
+    const navLinks = document.querySelectorAll(".link");
+    navLinks.forEach((link) => link.classList.remove("active"));
+    event.target.classList.add("active");
+
+    document.getElementById("nav-menu").classList.remove("show");
+  };
 
   return (
     <header className={styles.header}>
-      <nav className={styles.nav}>
+      <nav className={styles.nav + " " + styles.bdGrid}>
         <div>
-          <Link href="/" className={styles.nav__logo}>
-            Shahriar
+          <Link href="/">
+            <a className={styles.nav__logo}>Shahriar</a>
           </Link>
         </div>
 
         <div className={styles.nav__menu} id="nav-menu">
           <ul className={styles.nav__list}>
             <li className={styles.nav__item}>
-              <Link href="/#home" className={styles.nav__link}>
-                Home
+              <Link href="/">
+                <a
+                  className={styles.nav__link + " link active"}
+                  onClick={activeLinkHanlder}
+                >
+                  Home
+                </a>
               </Link>
             </li>
             <li className={styles.nav__item}>
-              <a href="#about" className={styles.nav__link}>
-                About
-              </a>
-            </li>
-            <li className={styles.nav__item}>
-              <Link href="#skills" className={styles.nav__link}>
-                Skills
+              <Link href="#about">
+                <a
+                  className={styles.nav__link + " link"}
+                  onClick={(event) => activeLinkHanlder(event)}
+                >
+                  About
+                </a>
               </Link>
             </li>
             <li className={styles.nav__item}>
-              <Link href="#portfolio" className={styles.nav__link}>
-                Portfolio
+              <Link href="#skills">
+                <a
+                  className={styles.nav__link + " link"}
+                  onClick={(event) => activeLinkHanlder(event)}
+                >
+                  Skills
+                </a>
               </Link>
             </li>
             <li className={styles.nav__item}>
-              <Link href="#contact" className={styles.nav__link}>
-                Contact
+              <Link href="#portfolio">
+                <a
+                  className={styles.nav__link + " link"}
+                  onClick={(event) => activeLinkHanlder(event)}
+                >
+                  Portfolio
+                </a>
+              </Link>
+            </li>
+            <li className={styles.nav__item}>
+              <Link href="#contact">
+                <a
+                  className={styles.nav__link + " link"}
+                  onClick={(event) => activeLinkHanlder(event)}
+                >
+                  Contact
+                </a>
               </Link>
             </li>
           </ul>
         </div>
 
-        <div
-          className={styles.nav__toggle}
-          id="nav-toggle"
-          onClick={() => setIsMenuOpen((prevState) => !prevState)}
-        >
-          <FiMenu />
-        </div>
+        {isMobileView && (
+          <div
+            className={styles.nav__toggle}
+            onClick={() =>
+              document.getElementById("nav-menu").classList.toggle("show")
+            }
+          >
+            <FiMenu />
+          </div>
+        )}
       </nav>
     </header>
   );

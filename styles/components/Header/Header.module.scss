@@ -1,3 +1,12 @@
+.bdGrid {
+  max-width: 1024px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-column-gap: 2rem;
+  margin: 0 auto;
+  width: calc(100% - 2rem);
+}
+
 .header {
   width: 100%;
   position: fixed;
@@ -21,19 +30,34 @@
       position: fixed;
       top: var(--header-height);
       right: -100%;
-      width: 80%;
+      width: 60%;
       height: 100%;
       padding: 2rem;
       background-color: var(--second-color);
+      text-align: center;
       transition: 0.5s;
     }
   }
+  &__list {
+    display: flex;
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+  }
   &__item {
-    margin-bottom: var(--mb-4);
+    margin-right: var(--m-4);
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: var(--m-4);
+    }
   }
   &__link {
     position: relative;
-    color: #fff;
+    color: var(--second-color);
+
+    @media screen and (max-width: 768px) {
+      color: #fff;
+    }
 
     &:hover {
       position: relative;
@@ -51,26 +75,11 @@
   }
   &__logo {
     color: var(--second-color);
+    font-size: 1.5rem;
   }
   &__toggle {
     color: var(--second-color);
     font-size: 1.5rem;
     cursor: pointer;
   }
-}
-
-// active menu
-.active::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 0.18rem;
-  left: 0;
-  top: 2rem;
-  background-color: var(--first-color);
-}
-
-// show menu
-.show {
-  right: 0;
 }
