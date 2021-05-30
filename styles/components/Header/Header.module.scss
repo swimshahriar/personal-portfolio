@@ -72,5 +72,9 @@
     color: var(--second-color);
     font-size: 1.5rem;
     cursor: pointer;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
   }
 }

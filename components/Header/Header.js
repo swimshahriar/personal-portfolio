@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Link from "next/link";
 import { FiMenu } from "react-icons/fi";
 
@@ -6,23 +5,6 @@ import { FiMenu } from "react-icons/fi";
 import styles from "../../styles/components/Header/Header.module.scss";
 
 const Header = () => {
-  const [isMobileView, setIsMobileView] = useState(false);
-
-  const onResizeHandler = () => {
-    if (window.innerWidth <= 768) {
-      setIsMobileView(true);
-    } else {
-      setIsMobileView(false);
-    }
-  };
-
-  useEffect(() => {
-    if (window.innerWidth <= 768) {
-      setIsMobileView(true);
-    }
-    window.onresize = onResizeHandler;
-  }, []);
-
   // active link indicator
   const activeLinkHanlder = (event) => {
     const navLinks = document.querySelectorAll(".link");
@@ -96,16 +78,14 @@ const Header = () => {
           </ul>
         </div>
 
-        {isMobileView && (
-          <div
-            className={styles.nav__toggle}
-            onClick={() =>
-              document.getElementById("nav-menu").classList.toggle("show")
-            }
-          >
-            <FiMenu />
-          </div>
-        )}
+        <div
+          className={styles.nav__toggle}
+          onClick={() =>
+            document.getElementById("nav-menu").classList.toggle("show")
+          }
+        >
+          <FiMenu />
+        </div>
       </nav>
     </header>
   );

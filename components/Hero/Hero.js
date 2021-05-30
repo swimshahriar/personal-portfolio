@@ -1,29 +1,46 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { FaLinkedin, FaTwitterSquare, FaGithubSquare } from "react-icons/fa";
-import TextTransition, { presets } from "react-text-transition";
+import {
+  FaLinkedin,
+  FaTwitter,
+  FaGithub,
+  FaStackOverflow,
+} from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 // style
 import styles from "../../styles/components/Hero/Hero.module.scss";
 
-const TEXTS = ["Software Developer", "Tech Enthusiast"];
-
 const Hero = () => {
-  const [index, setIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const onResizeHandler = () => {
+    if (window.innerWidth <= 768) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  };
 
   useEffect(() => {
-    const intervalId = setInterval(
-      () => setIndex((index) => index + 1),
-      3000 // every 3 seconds
-    );
-    return () => clearTimeout(intervalId);
+    if (window.innerWidth <= 768) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+    window.onresize = onResizeHandler;
   }, []);
 
   return (
     <section className={styles.hero + " sectionStyle"}>
       <div className={styles.hero__img}>
-        <Image src="/perfil.png" alt="shahriar" width={400} height={400} />
+        <Image
+          src="/perfil.png"
+          alt="shahriar"
+          width={isMobile ? 250 : 400}
+          height={isMobile ? 250 : 400}
+        />
       </div>
 
       <div className={styles.hero__data}>
@@ -31,13 +48,15 @@ const Hero = () => {
           Hi <span className={styles.hero__titleWave}>👋</span> <br /> I'am{" "}
           <span className={styles.hero__titleColor}>Shahriar</span>
           <br />
-          <TextTransition
-            text={TEXTS[index % TEXTS.length]}
-            springConfig={presets.wobbly}
-          />
+          Software Developer
         </h1>
         <Link href="/#contact">
-          <a className="button">Contact</a>
+          <a className="button">
+            <span className="buttonIcon">
+              <MdEmail />
+            </span>
+            Contact
+          </a>
         </Link>
 
         <div className={styles.hero__social}>
@@ -53,14 +72,21 @@ const Hero = () => {
             target="_blank"
             className={styles.hero__socialIcon}
           >
-            <FaTwitterSquare />
+            <FaTwitter />
+          </a>
+          <a
+            href="https://stackoverflow.com/users/12624145/swimshahriar"
+            target="_blank"
+            className={styles.hero__socialIcon}
+          >
+            <FaStackOverflow />
           </a>
           <a
             href="https://www.github.com/swimshahriar"
             target="_blank"
             className={styles.hero__socialIcon}
           >
-            <FaGithubSquare />
+            <FaGithub />
           </a>
         </div>
       </div>

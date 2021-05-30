@@ -5,6 +5,10 @@
 :root {
   --header-height: 3rem;
   --font-semi: 600;
+
+  @media screen and (min-width: 768px) {
+    --header-height: 3.5rem;
+  }
 }
 
 // colors
@@ -25,6 +29,12 @@
     --big-font-size: 3rem;
     --h2-font-size: 2rem;
     --normal-font-size: 1rem;
+  }
+
+  @media screen and (min-width: 1024px) {
+    --big-font-size: 3.5rem;
+    --h2-font-size: 2.3rem;
+    --normal-font-size: 1.2rem;
   }
 }
 
@@ -89,9 +99,6 @@ img {
 // section style
 .sectionStyle {
   max-width: 1024px;
-  // display: grid;
-  // grid-template-columns: 100%;
-  // grid-column-gap: 2rem;
   margin: 0 auto;
   width: calc(100% - 2rem);
 }
@@ -123,5 +130,9 @@ img {
 
   &:hover {
     box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
+  }
+
+  &Icon {
+    margin-right: 0.5rem;
   }
 }
