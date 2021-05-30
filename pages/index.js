@@ -13,6 +13,7 @@ export default function Home() {
       <Head>
         <title>Shahriar Swim</title>
         <link rel="icon" href="/favicon.ico" />
+        <script src="https://unpkg.com/scrollreveal"></script>
       </Head>
 
       <Header />

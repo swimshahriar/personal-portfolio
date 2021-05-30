@@ -32,19 +32,33 @@ const Hero = () => {
     window.onresize = onResizeHandler;
   }, []);
 
+  useEffect(() => {
+    const sr = ScrollReveal({
+      origin: "top",
+      distance: "80px",
+      duration: 2000,
+      reset: true,
+    });
+    // scroll reveal
+    sr.reveal(".title", {});
+    sr.reveal(".button", { delay: 200 });
+    sr.reveal(".img", { delay: 400 });
+    sr.reveal(".icon", { interval: 250 });
+  }, []);
+
   return (
     <section className={styles.hero + " sectionStyle"}>
-      <div className={styles.hero__img}>
+      <div className={styles.hero__img + " img"}>
         <Image
-          src="/perfil.png"
+          src="/shahriar.png"
           alt="shahriar"
-          width={isMobile ? 250 : 400}
-          height={isMobile ? 250 : 400}
+          width={isMobile ? 550 : 700}
+          height={isMobile ? 380 : 500}
         />
       </div>
 
       <div className={styles.hero__data}>
-        <h1 className={styles.hero__title}>
+        <h1 className={styles.hero__title + " title"}>
           Hi <span className={styles.hero__titleWave}>👋</span> <br /> I'am{" "}
           <span className={styles.hero__titleColor}>Shahriar</span>
           <br />
@@ -63,28 +77,28 @@ const Hero = () => {
           <a
             href="https://www.linkedin.com/in/swimshahriar/"
             target="_blank"
-            className={styles.hero__socialIcon}
+            className={styles.hero__socialIcon + " icon"}
           >
             <FaLinkedin />
           </a>
           <a
             href="https://www.twitter.com/swimshahriar"
             target="_blank"
-            className={styles.hero__socialIcon}
+            className={styles.hero__socialIcon + " icon"}
           >
             <FaTwitter />
           </a>
           <a
             href="https://stackoverflow.com/users/12624145/swimshahriar"
             target="_blank"
-            className={styles.hero__socialIcon}
+            className={styles.hero__socialIcon + " icon"}
           >
             <FaStackOverflow />
           </a>
           <a
             href="https://www.github.com/swimshahriar"
             target="_blank"
-            className={styles.hero__socialIcon}
+            className={styles.hero__socialIcon + " icon"}
           >
             <FaGithub />
           </a>
