@@ -26,7 +26,7 @@ const Header = () => {
         <div className={styles.nav__menu} id="nav-menu">
           <ul className={styles.nav__list}>
             <li className={styles.nav__item}>
-              <Link href="/">
+              <Link href="/#home">
                 <a
                   className={styles.nav__link + " link active"}
                   onClick={activeLinkHanlder}

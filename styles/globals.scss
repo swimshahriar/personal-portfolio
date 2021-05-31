@@ -22,18 +22,17 @@
 :root {
   --body-font: "Poppins", sans-serif;
 
-  --big-font-size: 2rem;
-  --h2-font-size: 1.25rem;
+  --big-font-size: 1.7rem;
+  --h2-font-size: 1.3rem;
   --normal-font-size: 0.938rem;
 
   @media screen and (min-width: 768px) {
-    --big-font-size: 3rem;
+    --big-font-size: 2.5rem;
     --h2-font-size: 2rem;
     --normal-font-size: 1rem;
   }
-
   @media screen and (min-width: 1024px) {
-    --big-font-size: 3.5rem;
+    --big-font-size: 3rem;
     --h2-font-size: 2.3rem;
     --normal-font-size: 1.2rem;
   }
@@ -136,4 +135,30 @@ img {
   &Icon {
     margin-right: 0.5rem;
   }
+}
+
+// sections
+.sectionTitle {
+  position: relative;
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+  margin-top: var(--m-2);
+  margin-bottom: var(--m-4);
+  text-align: center;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 5rem;
+    height: 0.18rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0;
+    background-color: var(--first-color);
+  }
+}
+.section {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
 }

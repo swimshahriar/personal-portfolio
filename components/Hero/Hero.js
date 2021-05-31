@@ -12,26 +12,7 @@ import { MdEmail } from "react-icons/md";
 // style
 import styles from "../../styles/components/Hero/Hero.module.scss";
 
-const Hero = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  const onResizeHandler = () => {
-    if (window.innerWidth <= 768) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-  };
-
-  useEffect(() => {
-    if (window.innerWidth <= 768) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-    window.onresize = onResizeHandler;
-  }, []);
-
+const Hero = ({ isMobile }) => {
   useEffect(() => {
     const sr = ScrollReveal({
       origin: "top",
@@ -47,7 +28,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className={styles.hero + " sectionStyle"}>
+    <section className={styles.hero + " sectionStyle"} id="home">
       <div className={styles.hero__img + " img"}>
         <Image
           src="/shahriar.png"
