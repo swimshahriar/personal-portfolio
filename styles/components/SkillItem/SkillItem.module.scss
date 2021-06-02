@@ -1,0 +1,39 @@
+.skill {
+  display: grid;
+  place-items: center;
+  min-width: 8rem;
+  width: 45%;
+  min-height: 5rem;
+  height: 6.5rem;
+  margin: 0.5rem;
+  margin-left: 0;
+  padding: 0.8rem;
+  box-shadow: 0.1rem 0.2rem 0.7rem rgba(0, 0, 0, 0.191);
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: all 0.3s ease-in;
+
+  @media screen and (min-width: 768px) {
+    width: 30%;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--first-color);
+    color: #fff;
+    transform: scale(0.99);
+
+    & > svg {
+      color: #fff;
+    }
+  }
+
+  & > svg {
+    color: var(--first-color);
+    transition: all 0.3s ease-in;
+  }
+
+  & > p {
+    margin-top: 0.5rem;
+  }
+}

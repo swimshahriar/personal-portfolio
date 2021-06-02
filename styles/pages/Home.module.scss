@@ -37,3 +37,45 @@
     align-self: center;
   }
 }
+
+// skills
+.skills {
+  &__container {
+    display: grid;
+    grid-template-areas:
+      "frontend"
+      "backend"
+      "lang"
+      "others";
+
+    gap: 2rem;
+
+    @media screen and (min-width: 768px) {
+      grid-template-areas:
+        "frontend backend"
+        "lang others";
+    }
+  }
+
+  &__languages {
+    grid-area: lang;
+  }
+
+  &__frontend {
+    grid-area: frontend;
+  }
+
+  &__backend {
+    grid-area: backend;
+  }
+
+  &__others {
+    grid-area: others;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
