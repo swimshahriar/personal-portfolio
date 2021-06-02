@@ -27,6 +27,13 @@
   &__data {
     grid-area: data;
     align-self: center;
+
+    @media screen and (min-width: 768px) {
+      min-width: 26rem;
+    }
+    @media screen and (min-width: 1024px) {
+      min-width: 32rem;
+    }
   }
 
   &__title {

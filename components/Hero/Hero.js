@@ -27,6 +27,16 @@ const Hero = ({ isMobile }) => {
     sr.reveal(".icon", { interval: 250 });
   }, []);
 
+  // typewriter
+  useEffect(() => {
+    new Typewriter("#typewriter", {
+      strings: "Software Developer",
+      autoStart: true,
+      loop: true,
+      pauseFor: 3000,
+    });
+  }, []);
+
   return (
     <section className={styles.hero + " sectionStyle"} id="home">
       <div className={styles.hero__img + " img"}>
@@ -43,7 +53,7 @@ const Hero = ({ isMobile }) => {
           Hi <span className={styles.hero__titleWave}>👋</span> <br /> I'am{" "}
           <span className={styles.hero__titleColor}>Shahriar</span>
           <br />
-          Software Developer
+          <span id="typewriter"></span>
         </h1>
         <Link href="/#contact">
           <a className="button">
