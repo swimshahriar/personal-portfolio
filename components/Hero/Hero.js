@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -15,8 +15,8 @@ import styles from "../../styles/components/Hero/Hero.module.scss";
 const Hero = ({ isMobile }) => {
   useEffect(() => {
     const sr = ScrollReveal({
-      origin: "top",
-      distance: "80px",
+      origin: "bottom",
+      distance: "20px",
       duration: 2000,
       reset: true,
     });

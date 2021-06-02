@@ -37,7 +37,7 @@ export default function Home() {
   useEffect(() => {
     const sr = ScrollReveal({
       origin: "bottom",
-      distance: "80px",
+      distance: "20px",
       duration: 2000,
       reset: true,
     });
@@ -52,6 +52,8 @@ export default function Home() {
       <Head>
         <title>Shahriar Swim</title>
         <link rel="icon" href="/favicon.ico" />
+        {/* scripts - typewriter & scrollreveal */}
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
         <script src="https://unpkg.com/scrollreveal"></script>
       </Head>
 

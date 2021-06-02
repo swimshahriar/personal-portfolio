@@ -12,7 +12,7 @@ const SkillItem = ({ icon, title }) => {
       reset: true,
     });
     // scroll reveal
-    sr.reveal(".item", { delay: 200 });
+    sr.reveal(".item", { interval: 50 });
   }, []);
 
   return (

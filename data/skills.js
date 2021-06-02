@@ -9,7 +9,6 @@ import {
   FaGitAlt,
   FaGithub,
   FaFigma,
-  FaCode,
 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import {
@@ -19,6 +18,8 @@ import {
   SiMongodb,
   SiMysql,
   SiFirebase,
+  SiNextDotJs,
+  SiJest,
 } from "react-icons/si";
 
 export default {
@@ -61,6 +62,10 @@ export default {
       {
         icon: <FaReact />,
         title: "Reactjs",
+      },
+      {
+        icon: <SiNextDotJs />,
+        title: "Nextjs",
       },
       {
         icon: <FaReact />,
@@ -119,8 +124,8 @@ export default {
         title: "Figma",
       },
       {
-        icon: <FaCode />,
-        title: "MVC",
+        icon: <SiJest />,
+        title: "Jest",
       },
     ],
   },
