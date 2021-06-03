@@ -8,10 +8,11 @@ import skillsData from "../data/skills";
 // components
 import Header from "../components/Header/Header";
 import Hero from "../components/Hero/Hero";
+import SkillItem from "../components/SkillItem/SkillItem";
+import Footer from "../components/Footer";
 
 // styles
 import styles from "../styles/pages/Home.module.scss";
-import SkillItem from "../components/SkillItem/SkillItem";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -156,6 +157,8 @@ export default function Home() {
           </div>
         </section>
       </main>
+
+      <Footer />
     </>
   );
 }
