@@ -1,0 +1,37 @@
+export default [
+  {
+    img: "https://i.ibb.co/M8TW6TL/daily-Pick-mockup.png",
+    alt: "dailypick",
+    title: "DailyPick - Online Grocery Shop",
+    tech: [
+      "Reactjs",
+      "Context API",
+      "Material UI",
+      "Nodejs",
+      "Expressjs",
+      "MongoDB",
+      "JWT",
+    ],
+    desc: "People can buy their daily groceries from this website.",
+    liveUrl: "https://dailypick.netlify.app/",
+    github: "https://github.com/swimshahriar/dailyPick-grocery-shop",
+  },
+  {
+    img: "https://i.ibb.co/0sXJF2N/Screenshot-2021-06-05-at-6-36-34-PM.png",
+    alt: "mCart",
+    title: "mCart - Mens Cart Online Shop",
+    tech: ["Ejs", "Bootstrap4", "Nodejs", "Expressjs", "MongoDB"],
+    desc: "Mens can buy their daily clothings and accessories from this website.",
+    liveUrl: "https://mcartshop.herokuapp.com/",
+    github: "https://github.com/swimshahriar/eCommerce-site-mCart",
+  },
+  {
+    img: "https://i.ibb.co/qyM6P8C/Screenshot-2021-06-05-at-9-26-09-PM.png",
+    alt: "tod internet",
+    title: "TOD - Internet",
+    tech: ["Reactjs", "Context API", "TailwindCSS", "Mapbox"],
+    desc: "Website for a local internet service provider.",
+    liveUrl: "https://tod-internet.netlify.app",
+    github: "https://github.com/swimshahriar/tod-internet",
+  },
+];

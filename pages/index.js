@@ -4,6 +4,7 @@ import Image from "next/image";
 
 // data
 import skillsData from "../data/skills";
+import projects from "../data/projects";
 
 // components
 import Header from "../components/Header/Header";
@@ -13,6 +14,7 @@ import Footer from "../components/Footer";
 
 // styles
 import styles from "../styles/pages/Home.module.scss";
+import Card from "../components/Card";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -155,6 +157,37 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </section>
+
+        {/* projects */}
+        <section
+          className={styles.projects + " section sectionStyle"}
+          id="projects"
+        >
+          <h2 className="sectionTitle">Projects</h2>
+
+          <div className={styles.projects__list}>
+            {projects.map((project, index) => (
+              <Card
+                key={index}
+                img={project.img}
+                alt={project.alt}
+                title={project.title}
+                tech={project.tech}
+                desc={project.desc}
+                liveUrl={project.liveUrl}
+                github={project.github}
+              />
+            ))}
+          </div>
+
+          <a
+            className={styles.projects__btn + " button"}
+            href="https://github.com/swimshahriar"
+            target="_blank"
+          >
+            See More
+          </a>
         </section>
       </main>
 

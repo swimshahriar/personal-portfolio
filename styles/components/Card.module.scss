@@ -1,0 +1,86 @@
+.card {
+  box-shadow: 0.1rem 0.2rem 0.7rem rgba(0, 0, 0, 0.191);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  min-width: 18rem;
+  width: 20rem;
+  min-height: fit-content;
+  height: 36rem;
+
+  @media screen and (min-width: 400px) {
+    margin-right: 1rem;
+  }
+  @media screen and (min-width: 768px) {
+    width: 20rem;
+    height: 42rem;
+  }
+
+  & img {
+    border-radius: 0.5rem;
+    box-shadow: 0.1rem 0.2rem 0.7rem rgba(0, 0, 0, 0.191);
+    overflow: hidden;
+    transition: 0.5s ease-in;
+
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+  }
+
+  &__tech {
+    margin: 0.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    p {
+      background-color: var(--first-color);
+      color: #fff;
+      margin: 0.2rem;
+      padding: 0.3rem;
+      border-radius: 0.5rem;
+      font-size: 0.9rem;
+
+      &:nth-child(odd) {
+        background-color: var(--second-color);
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 0.5rem;
+  }
+
+  &__desc {
+    margin-bottom: 1rem;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      border: 2px solid var(--first-color);
+      border-radius: 0.5rem;
+      margin: 0 0.7rem;
+      padding: 0.3rem 0.7rem;
+      box-shadow: 0.1rem 0.2rem 0.7rem rgba(0, 0, 0, 0.191);
+      transition: 0.3s ease-in;
+
+      &:nth-child(even) {
+        background-color: var(--first-color);
+        color: #fff !important;
+      }
+
+      &:hover {
+        background-color: var(--first-color);
+        color: #fff !important;
+      }
+
+      &:visited {
+        color: var(--second-color);
+      }
+    }
+  }
+}

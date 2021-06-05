@@ -56,12 +56,12 @@ const Header = () => {
               </Link>
             </li>
             <li className={styles.nav__item}>
-              <Link href="#portfolio">
+              <Link href="#projects">
                 <a
                   className={styles.nav__link + " link"}
                   onClick={(event) => activeLinkHanlder(event)}
                 >
-                  Portfolio
+                  Projects
                 </a>
               </Link>
             </li>
