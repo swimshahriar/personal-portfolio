@@ -118,3 +118,20 @@
     place-items: center;
   }
 }
+
+// contacts
+.contact {
+  &__button {
+    display: block;
+    border: none;
+    outline: none;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi);
+    cursor: pointer;
+    margin: 1rem auto;
+    padding: 01rem 2.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--first-color);
+    color: #fff;
+  }
+}

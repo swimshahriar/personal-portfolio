@@ -15,6 +15,7 @@ import Footer from "../components/Footer";
 // styles
 import styles from "../styles/pages/Home.module.scss";
 import Card from "../components/Card";
+import InputField from "../components/InputField";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -188,6 +189,47 @@ export default function Home() {
           >
             See More
           </a>
+        </section>
+
+        {/* contact */}
+        <section
+          className={styles.contact + " section sectionStyle"}
+          id="contact"
+        >
+          <h2 className="sectionTitle">Contact</h2>
+          <from className={styles.contact__form}>
+            <InputField
+              placeholder="your name"
+              required={true}
+              id="name"
+              title="Name"
+            />
+            <InputField
+              type="email"
+              placeholder="your email"
+              required={true}
+              id="email"
+              title="Email"
+            />
+            <InputField
+              type="text"
+              placeholder="your subject"
+              required={true}
+              id="subject"
+              title="Subject"
+            />
+            <InputField
+              type="textarea"
+              placeholder="your message"
+              required={true}
+              id="message"
+              title="Message"
+            />
+          </from>
+
+          <button className={styles.contact__button} type="submit">
+            Send
+          </button>
         </section>
       </main>
 
