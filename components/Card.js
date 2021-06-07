@@ -17,7 +17,7 @@ const Card = ({ img, alt, title, tech, desc, liveUrl, github }) => {
 
   return (
     <div className={styles.card} id="card">
-      <Image src={img} alt={alt} width={400} height={400} />
+      <Image src={img} alt={alt} width={500} height={400} />
 
       <div className={styles.card__details}>
         <div className={styles.card__tech}>

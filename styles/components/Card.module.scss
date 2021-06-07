@@ -4,26 +4,27 @@
   padding: 1rem;
   border-radius: 0.5rem;
   min-width: 18rem;
-  width: 20rem;
-  min-height: fit-content;
-  height: 36rem;
+  width: 100%;
+  max-width: 25rem;
+  height: fit-content;
 
-  @media screen and (min-width: 400px) {
-    margin-right: 1rem;
-  }
   @media screen and (min-width: 768px) {
-    width: 20rem;
-    height: 42rem;
+    margin-right: 1rem;
+    max-width: 26rem;
+    min-height: fit-content;
+    height: 38rem;
   }
 
+  & > div {
+    border-radius: 0.5rem;
+  }
   & img {
     border-radius: 0.5rem;
     box-shadow: 0.1rem 0.2rem 0.7rem rgba(0, 0, 0, 0.191);
-    overflow: hidden;
     transition: 0.5s ease-in;
 
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.07);
       cursor: pointer;
     }
   }
@@ -32,6 +33,7 @@
     margin: 0.5rem 0;
     display: flex;
     flex-wrap: wrap;
+    height: 3.8rem;
 
     p {
       background-color: var(--first-color);
@@ -39,10 +41,15 @@
       margin: 0.2rem;
       padding: 0.3rem;
       border-radius: 0.5rem;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
+      height: fit-content;
 
       &:nth-child(odd) {
         background-color: var(--second-color);
+      }
+
+      @media screen and (min-width: 768px) {
+        font-size: 0.9rem;
       }
     }
   }
