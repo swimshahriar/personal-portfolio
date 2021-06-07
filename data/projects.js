@@ -19,7 +19,7 @@ export default [
   {
     img: "https://i.ibb.co/0sXJF2N/Screenshot-2021-06-05-at-6-36-34-PM.png",
     alt: "mCart",
-    title: "mCart - Mens Cart Online Shop",
+    title: "mCart - Online Shop",
     tech: ["Ejs", "Bootstrap4", "Nodejs", "Expressjs", "MongoDB"],
     desc: "Mens can buy their daily clothings and accessories from this website.",
     liveUrl: "https://mcartshop.herokuapp.com/",
@@ -33,5 +33,14 @@ export default [
     desc: "Website for a local internet service provider.",
     liveUrl: "https://tod-internet.netlify.app",
     github: "https://github.com/swimshahriar/tod-internet",
+  },
+  {
+    img: "https://i.ibb.co/n7qKT5p/eventman.png",
+    alt: "Eventman",
+    title: "Eventman",
+    tech: ["Reactjs", "Context API", "Firebase", "Live Chat"],
+    desc: "Website for a local event management agency.",
+    liveUrl: "https://eventman.netlify.app/",
+    github: "https://github.com/swimshahriar/eventman",
   },
 ];

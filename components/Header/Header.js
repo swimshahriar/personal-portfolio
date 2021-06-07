@@ -36,7 +36,7 @@ const Header = () => {
               </Link>
             </li>
             <li className={styles.nav__item}>
-              <Link href="#about">
+              <Link href="/#about">
                 <a
                   className={styles.nav__link + " link"}
                   onClick={(event) => activeLinkHanlder(event)}
@@ -46,7 +46,7 @@ const Header = () => {
               </Link>
             </li>
             <li className={styles.nav__item}>
-              <Link href="#skills">
+              <Link href="/#skills">
                 <a
                   className={styles.nav__link + " link"}
                   onClick={(event) => activeLinkHanlder(event)}
@@ -56,7 +56,7 @@ const Header = () => {
               </Link>
             </li>
             <li className={styles.nav__item}>
-              <Link href="#projects">
+              <Link href="/#projects">
                 <a
                   className={styles.nav__link + " link"}
                   onClick={(event) => activeLinkHanlder(event)}
@@ -66,7 +66,7 @@ const Header = () => {
               </Link>
             </li>
             <li className={styles.nav__item}>
-              <Link href="#contact">
+              <Link href="/#contact">
                 <a
                   className={styles.nav__link + " link"}
                   onClick={(event) => activeLinkHanlder(event)}
