@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
+import Swal from "sweetalert2";
 
 // data
 import skillsData from "../data/skills";
@@ -86,8 +87,23 @@ export default function Home() {
           setSubject("");
           setMessage("");
         }
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Success!",
+          showConfirmButton: false,
+          timer: 1500,
+        });
       })
-      .catch((err) => alert(err.message));
+      .catch((err) =>
+        Swal.fire({
+          position: "top-end",
+          icon: "error",
+          title: "Failed!",
+          showConfirmButton: false,
+          timer: 1500,
+        })
+      );
   };
 
   return (
