@@ -11,6 +11,8 @@ const InputField = ({
   col = 30,
   id,
   title,
+  value,
+  setValue,
 }) => {
   useEffect(() => {
     const sr = ScrollReveal({
@@ -39,6 +41,8 @@ const InputField = ({
           required={required}
           id={id}
           className={styles.inputField__input + " input"}
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
         />
         <br />
       </>
@@ -56,6 +60,8 @@ const InputField = ({
           required={required}
           id={id}
           className={styles.inputField__input + " input"}
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
         />
         <br />
       </>

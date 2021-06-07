@@ -11,6 +11,7 @@ import Header from "../components/Header/Header";
 import Hero from "../components/Hero/Hero";
 import SkillItem from "../components/SkillItem/SkillItem";
 import Footer from "../components/Footer";
+import Loader from "../components/Loader";
 
 // styles
 import styles from "../styles/pages/Home.module.scss";
@@ -20,6 +21,12 @@ import InputField from "../components/InputField";
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
   const { languages, frontend, backend, others } = skillsData;
+  // contact
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [submmitted, setSubmitted] = useState(true);
 
   const onResizeHandler = () => {
     if (window.innerWidth <= 768) {
@@ -50,6 +57,38 @@ export default function Home() {
     sr.reveal(".para", { delay: 400 });
     sr.reveal(".aboutImg", { delay: 400 });
   }, []);
+
+  // contact
+  const contactSubmitHandler = async (e) => {
+    e.preventDefault();
+    setSubmitted(false);
+
+    const data = {
+      name,
+      email,
+      subject,
+      message,
+    };
+
+    fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => {
+        if (res.status === 200) {
+          setSubmitted(true);
+          setName("");
+          setEmail("");
+          setSubject("");
+          setMessage("");
+        }
+      })
+      .catch((err) => alert(err.message));
+  };
 
   return (
     <>
@@ -197,12 +236,17 @@ export default function Home() {
           id="contact"
         >
           <h2 className="sectionTitle">Contact</h2>
-          <from className={styles.contact__form}>
+          <form
+            className={styles.contact__form}
+            onSubmit={contactSubmitHandler}
+          >
             <InputField
               placeholder="your name"
               required={true}
               id="name"
               title="Name"
+              value={name}
+              setValue={setName}
             />
             <InputField
               type="email"
@@ -210,6 +254,8 @@ export default function Home() {
               required={true}
               id="email"
               title="Email"
+              value={email}
+              setValue={setEmail}
             />
             <InputField
               type="text"
@@ -217,6 +263,8 @@ export default function Home() {
               required={true}
               id="subject"
               title="Subject"
+              value={subject}
+              setValue={setSubject}
             />
             <InputField
               type="textarea"
@@ -224,12 +272,17 @@ export default function Home() {
               required={true}
               id="message"
               title="Message"
+              value={message}
+              setValue={setMessage}
             />
-          </from>
-
-          <button className={styles.contact__button} type="submit">
-            Send
-          </button>
+            {!submmitted ? (
+              <Loader />
+            ) : (
+              <button className={styles.contact__button} type="submit">
+                Send
+              </button>
+            )}
+          </form>
         </section>
       </main>
 
