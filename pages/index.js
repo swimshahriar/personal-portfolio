@@ -1,7 +1,15 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import Swal from "sweetalert2";
+import {
+  FaLinkedin,
+  FaTwitter,
+  FaGithub,
+  FaStackOverflow,
+} from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 // data
 import skillsData from "../data/skills";
@@ -9,7 +17,6 @@ import projects from "../data/projects";
 
 // components
 import Header from "../components/Header/Header";
-import Hero from "../components/Hero/Hero";
 import SkillItem from "../components/SkillItem/SkillItem";
 import Footer from "../components/Footer";
 import Loader from "../components/Loader";
@@ -53,10 +60,30 @@ export default function Home() {
       duration: 2000,
       reset: true,
     });
-    // scroll reveal
+
+    // hero
+    sr.reveal(".title", {});
+    sr.reveal(".button", { delay: 200 });
+    sr.reveal(".img", { delay: 400 });
+    sr.reveal(".icon", { interval: 250 });
+
+    // about
     sr.reveal(".sub", {});
     sr.reveal(".para", { delay: 400 });
     sr.reveal(".aboutImg", { delay: 400 });
+
+    // contact
+    sr.reveal(".contactBtn", {});
+  }, []);
+
+  // typewriter
+  useEffect(() => {
+    new Typewriter("#typewriter", {
+      strings: "Software Developer",
+      autoStart: true,
+      loop: true,
+      pauseFor: 3000,
+    });
   }, []);
 
   // contact
@@ -119,7 +146,65 @@ export default function Home() {
       <Header />
 
       <main>
-        <Hero isMobile={isMobile} />
+        {/* <Hero isMobile={isMobile} /> */}
+        {/* hero */}
+        <section className={styles.hero + " sectionStyle"} id="home">
+          <div className={styles.hero__img + " img"}>
+            <Image
+              src="/shahriar.png"
+              alt="shahriar"
+              width={isMobile ? 550 : 700}
+              height={isMobile ? 380 : 500}
+            />
+          </div>
+
+          <div className={styles.hero__data}>
+            <h1 className={styles.hero__title + " title"}>
+              Hi 👋 <br /> I'am{" "}
+              <span className={styles.hero__titleColor}>Shahriar</span>
+              <br />
+              <span id="typewriter"></span>
+            </h1>
+            <Link href="/#contact">
+              <a className={styles.hero__button + " button"}>
+                <MdEmail />
+                <p>Contact</p>
+              </a>
+            </Link>
+
+            <div className={styles.hero__social}>
+              <a
+                href="https://www.linkedin.com/in/swimshahriar/"
+                target="_blank"
+                className={styles.hero__socialIcon + " icon"}
+              >
+                <FaLinkedin />
+              </a>
+              <a
+                href="https://www.twitter.com/swimshahriar"
+                target="_blank"
+                className={styles.hero__socialIcon + " icon"}
+              >
+                <FaTwitter />
+              </a>
+              <a
+                href="https://stackoverflow.com/users/12624145/swimshahriar"
+                target="_blank"
+                className={styles.hero__socialIcon + " icon"}
+              >
+                <FaStackOverflow />
+              </a>
+              <a
+                href="https://www.github.com/swimshahriar"
+                target="_blank"
+                className={styles.hero__socialIcon + " icon"}
+              >
+                <FaGithub />
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* about */}
         <section className={styles.about + " section"} id="about">
           <h2 className="sectionTitle">About</h2>
@@ -127,12 +212,11 @@ export default function Home() {
           <div className={styles.about__container + " sectionStyle"}>
             <div className={styles.about__details}>
               <h2 className={styles.about__subtitle + " sub"}>
-                I'am S. M. Shahriar
+                S. M. Shahriar
               </h2>
               <p className={styles.about__text + " para"}>
-                A Computer Science and Engineering student. As a computer
-                science student and also as a tech enthusiast I am learning new
-                technologies every day. My interest areas are{" "}
+                As a computer science student and also as a tech enthusiast I am
+                learning new technologies every day. My interest areas are{" "}
                 <span>Machine Learning</span> and{" "}
                 <span>Software Development.</span>
               </p>
@@ -294,7 +378,10 @@ export default function Home() {
             {!submmitted ? (
               <Loader />
             ) : (
-              <button className={styles.contact__button} type="submit">
+              <button
+                className={styles.contact__button + " contactBtn"}
+                type="submit"
+              >
                 Send
               </button>
             )}
