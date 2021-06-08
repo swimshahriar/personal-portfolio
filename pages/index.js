@@ -160,7 +160,7 @@ export default function Home() {
           content="https://swimshahriar.vercel.app/shahriar.png"
         />
         <meta property="og:url" content="https://swimshahriar.vercel.app" />
-        <meta name="twitter:card" content="S. M. Shahriar - Portfolio" />
+        <meta name="twitter:card" content="summary_large_image" />
         {/* scripts - typewriter & scrollreveal */}
         <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
         <script src="https://unpkg.com/scrollreveal"></script>
