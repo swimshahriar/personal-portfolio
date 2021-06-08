@@ -1,5 +1,6 @@
 export default [
   {
+    serial: 1,
     img: "https://i.ibb.co/M8TW6TL/daily-Pick-mockup.png",
     alt: "dailypick",
     title: "DailyPick - Online Grocery Shop",
@@ -11,12 +12,24 @@ export default [
       "Expressjs",
       "MongoDB",
       "JWT",
+      "Jest",
     ],
     desc: "People can buy their daily groceries from this website.",
     liveUrl: "https://dailypick.netlify.app/",
     github: "https://github.com/swimshahriar/dailyPick-grocery-shop",
   },
   {
+    serial: 2,
+    img: "https://i.ibb.co/23N3Lhh/portfolio.png",
+    alt: "portfolio",
+    title: "Personal Portfolio",
+    tech: ["Nextjs", "Serverless Functions", "Nodemailer", "OAuth2"],
+    desc: "My personal portfolio site.",
+    liveUrl: "https://swimshahriar.vercel.app/",
+    github: "https://github.com/swimshahriar/personal-portfolio",
+  },
+  {
+    serial: 3,
     img: "https://i.ibb.co/0sXJF2N/Screenshot-2021-06-05-at-6-36-34-PM.png",
     alt: "mCart",
     title: "mCart - Online Shop",
@@ -26,6 +39,7 @@ export default [
     github: "https://github.com/swimshahriar/eCommerce-site-mCart",
   },
   {
+    serial: 4,
     img: "https://i.ibb.co/qyM6P8C/Screenshot-2021-06-05-at-9-26-09-PM.png",
     alt: "tod internet",
     title: "TOD - Internet",
@@ -35,6 +49,7 @@ export default [
     github: "https://github.com/swimshahriar/tod-internet",
   },
   {
+    serial: 5,
     img: "https://i.ibb.co/n7qKT5p/eventman.png",
     alt: "Eventman",
     title: "Eventman",

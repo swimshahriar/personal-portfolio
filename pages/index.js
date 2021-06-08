@@ -148,7 +148,7 @@ export default function Home() {
     <>
       <Head>
         <title>Shahriar Swim</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" href="/manlaptop.png" />
         {/* scripts - typewriter & scrollreveal */}
         <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
         <script src="https://unpkg.com/scrollreveal"></script>
@@ -227,17 +227,18 @@ export default function Home() {
               </h2>
               <p className={styles.about__text + " para"}>
                 As a computer science student and also as a tech enthusiast I am
-                learning new technologies every day. My interest areas are{" "}
+                learning new technologies every day. It keeps me motivated
+                towards my work. My interest areas are{" "}
                 <span>Machine Learning</span> and{" "}
                 <span>Software Development.</span>
               </p>
             </div>
             <div className={styles.about__img + " aboutImg"}>
               <Image
-                src="/shahriar.png"
-                alt="shahriar"
-                width={isMobile ? 550 : 700}
-                height={isMobile ? 380 : 500}
+                src="/manlaptop.png"
+                alt="man with laptop"
+                width={isMobile ? 300 : 500}
+                height={isMobile ? 300 : 500}
               />
             </div>
           </div>
