@@ -159,11 +159,8 @@ export default function Home() {
         <meta property="og:url" content="/" />
         <meta name="twitter:card" content="S. M. Shahriar - Portfolio" />
         {/* scripts - typewriter & scrollreveal */}
-        <script
-          src="https://unpkg.com/typewriter-effect@latest/dist/core.js"
-          defer
-        ></script>
-        <script src="https://unpkg.com/scrollreveal" defer></script>
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
       </Head>
 
       <Header />
