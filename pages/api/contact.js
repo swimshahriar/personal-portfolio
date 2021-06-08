@@ -32,6 +32,17 @@ export default async (req, res) => {
       </div>`,
   };
 
+  // verify connection configuration
+  transporter.verify((error, _) => {
+    if (error) {
+      return res.status(400).json({
+        status: "failed",
+        message: err.message,
+      });
+    }
+  });
+
+  // send mail
   transporter.sendMail(mailData, (err, info) => {
     if (err) {
       return res.status(400).json({
@@ -41,7 +52,6 @@ export default async (req, res) => {
     }
     return res.status(200).json({
       status: "success",
-      message: info,
     });
   });
 };
