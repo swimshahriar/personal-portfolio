@@ -107,30 +107,41 @@ export default function Home() {
       body: JSON.stringify(data),
     })
       .then((res) => {
+        setSubmitted(true);
+
         if (res.status === 200) {
-          setSubmitted(true);
           setName("");
           setEmail("");
           setSubject("");
           setMessage("");
+
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Success!",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        } else {
+          Swal.fire({
+            position: "top-end",
+            icon: "error",
+            title: "Failed!",
+            showConfirmButton: false,
+            timer: 1500,
+          });
         }
-        Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: "Success!",
-          showConfirmButton: false,
-          timer: 1500,
-        });
       })
-      .catch((err) =>
+      .catch((err) => {
+        setSubmitted(true);
         Swal.fire({
           position: "top-end",
           icon: "error",
           title: "Failed!",
           showConfirmButton: false,
           timer: 1500,
-        })
-      );
+        });
+      });
   };
 
   return (
