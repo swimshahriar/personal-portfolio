@@ -147,7 +147,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Shahriar Swim</title>
+        <title>S. M. Shahriar</title>
         <link rel="icon" type="image/png" href="/manlaptop.png" />
         {/* tag for social media */}
         <meta property="og:title" content="S. M. Shahriar - Portfolio" />
@@ -155,8 +155,11 @@ export default function Home() {
           property="og:description"
           content="Personal site for showcasing projects and skills."
         />
-        <meta property="og:image" content="/manlaptop.png" />
-        <meta property="og:url" content="/" />
+        <meta
+          property="og:image"
+          content="https://swimshahriar.vercel.app/shahriar.png"
+        />
+        <meta property="og:url" content="https://swimshahriar.vercel.app" />
         <meta name="twitter:card" content="S. M. Shahriar - Portfolio" />
         {/* scripts - typewriter & scrollreveal */}
         <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
