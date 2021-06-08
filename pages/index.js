@@ -155,7 +155,7 @@ export default function Home() {
           property="og:description"
           content="Personal site for showcasing projects and skills."
         />
-        <meta property="og:image" content="/manlaptop.jpg" />
+        <meta property="og:image" content="/manlaptop.png" />
         <meta property="og:url" content="/" />
         <meta name="twitter:card" content="S. M. Shahriar - Portfolio" />
         {/* scripts - typewriter & scrollreveal */}
