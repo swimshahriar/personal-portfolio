@@ -149,9 +149,21 @@ export default function Home() {
       <Head>
         <title>Shahriar Swim</title>
         <link rel="icon" type="image/png" href="/manlaptop.png" />
+        {/* tag for social media */}
+        <meta property="og:title" content="S. M. Shahriar - Portfolio" />
+        <meta
+          property="og:description"
+          content="Personal site for showcasing projects and skills."
+        />
+        <meta property="og:image" content="/manlaptop.jpg" />
+        <meta property="og:url" content="/" />
+        <meta name="twitter:card" content="S. M. Shahriar - Portfolio" />
         {/* scripts - typewriter & scrollreveal */}
-        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-        <script src="https://unpkg.com/scrollreveal"></script>
+        <script
+          src="https://unpkg.com/typewriter-effect@latest/dist/core.js"
+          defer
+        ></script>
+        <script src="https://unpkg.com/scrollreveal" defer></script>
       </Head>
 
       <Header />

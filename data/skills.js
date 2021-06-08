@@ -9,6 +9,7 @@ import {
   FaGitAlt,
   FaGithub,
   FaFigma,
+  FaWordpress,
 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import {
@@ -126,6 +127,10 @@ export default {
       {
         icon: <SiJest />,
         title: "Jest",
+      },
+      {
+        icon: <FaWordpress />,
+        title: "Wordpress",
       },
     ],
   },

@@ -23,7 +23,7 @@ export default [
     img: "https://i.ibb.co/23N3Lhh/portfolio.png",
     alt: "portfolio",
     title: "Personal Portfolio",
-    tech: ["Nextjs", "Serverless Functions", "Nodemailer", "OAuth2"],
+    tech: ["Nextjs", "Serverless Functions", "Nodemailer", "OAuth2", "SCSS"],
     desc: "My personal portfolio site.",
     liveUrl: "https://swimshahriar.vercel.app/",
     github: "https://github.com/swimshahriar/personal-portfolio",
