@@ -153,7 +153,7 @@ export default function Home() {
         <meta property="og:title" content="S. M. Shahriar - Portfolio" />
         <meta
           property="og:description"
-          content="Personal site for showcasing projects and skills."
+          content="A personal site to showcase projects and skills."
         />
         <meta
           property="og:image"
