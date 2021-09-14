@@ -10,6 +10,8 @@ import {
   FaGithub,
   FaFigma,
   FaWordpress,
+  FaJava,
+  FaCode,
 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import {
@@ -32,9 +34,17 @@ export default {
         title: "JavaScript",
       },
       {
-        icon: <FaPython />,
-        title: "Python",
+        icon: <FaJava />,
+        title: "Java",
       },
+      {
+        icon: <FaCode />,
+        title: "C",
+      },
+      // {
+      //   icon: <FaPython />,
+      //   title: "Python",
+      // },
     ],
   },
   frontend: {
@@ -98,10 +108,10 @@ export default {
         icon: <SiMongodb />,
         title: "MongoDB",
       },
-      {
-        icon: <SiMysql />,
-        title: "MySQL",
-      },
+      // {
+      //   icon: <SiMysql />,
+      //   title: "MySQL",
+      // },
       {
         icon: <SiFirebase />,
         title: "Firebase",
@@ -124,10 +134,10 @@ export default {
         icon: <FaFigma />,
         title: "Figma",
       },
-      {
-        icon: <SiJest />,
-        title: "Jest",
-      },
+      // {
+      //   icon: <SiJest />,
+      //   title: "Jest",
+      // },
       {
         icon: <FaWordpress />,
         title: "Wordpress",

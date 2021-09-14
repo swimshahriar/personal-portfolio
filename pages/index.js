@@ -238,11 +238,10 @@ export default function Home() {
                 S. M. Shahriar
               </h2>
               <p className={styles.about__text + " para"}>
-                As a computer science student and also as a tech enthusiast I am
-                learning new technologies every day. It keeps me motivated
-                towards my work. My interest areas are{" "}
-                <span>Machine Learning</span> and{" "}
-                <span>Software Development.</span>
+                As a tech enthusiast I am learning new technologies every day.
+                It keeps me motivated towards my work. My interest areas are{" "}
+                <span>Software Development</span> and{" "}
+                <span>Machine Learning.</span>
               </p>
             </div>
             <div className={styles.about__img + " aboutImg"}>

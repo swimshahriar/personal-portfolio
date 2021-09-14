@@ -12,7 +12,7 @@
     margin-right: 1rem;
     max-width: 26rem;
     min-height: fit-content;
-    height: 38rem;
+    // height: 38rem;
   }
 
   & > div {
@@ -33,7 +33,6 @@
     margin: 0.5rem 0;
     display: flex;
     flex-wrap: wrap;
-    height: 3.8rem;
 
     p {
       background-color: var(--first-color);
