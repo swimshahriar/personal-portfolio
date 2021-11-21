@@ -57,7 +57,7 @@ export default function Home() {
     const sr = ScrollReveal({
       origin: "bottom",
       distance: "20px",
-      duration: 2000,
+      duration: 500,
       reset: true,
     });
 
